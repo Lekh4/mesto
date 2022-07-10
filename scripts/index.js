@@ -1,6 +1,6 @@
 const popupEditAuthorBtn = document.querySelector('.profile__edit-button');
 const popupCloseBtn = document.querySelector('.popup__close-button');
-const formAuthor = document.querySelector('.popup__edit-name');
+const formAuthor = document.querySelector('.popup__edit');
 
 const authorNameInForm = document.querySelector('.form__input_info_author-name');
 const authorProfile = document.querySelector('.profile__name');
