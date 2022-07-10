@@ -1,0 +1,23 @@
+.element__like {
+    width: 22px;
+    height: 19px;
+    cursor: pointer;
+    background-image: url('../../../images/like-button-inactive.jpg');
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0;
+    transition: .6s;
+    margin-top: 22px;
+    margin-right: 21px;
+}
+
+.element__like:hover {
+    transition: .6s;
+    opacity: 0.5;
+}
+
+@media screen and (max-width: 320px) {
+    .element__like {
+        padding-right: 20px;
+    }
+}

@@ -1,0 +1,5 @@
+.element__image {
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+}
