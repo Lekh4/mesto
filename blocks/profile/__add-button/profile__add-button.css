@@ -23,14 +23,8 @@
     .profile__add-button {
         width: 278px;
         height: 48px;
-        margin: 0;
+        margin: auto;
         grid-area: add-button;
-        margin-right: 210px;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    .profile__add-button {
-        margin-right: 0;
+        margin: auto;
     }
 }

@@ -19,8 +19,8 @@
     .profile__edit-button {
         width: 18px;
         height: 18px;
-        margin-top: 34px;
-        margin-right: 16px;
+        margin-top: 36px;
+        margin-right: 19px;
         grid-area: edit-button;
     }
 }

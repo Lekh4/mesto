@@ -9,7 +9,7 @@
 
 @media screen and (max-width: 740px) {
     .profile {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: minmax(120px, 1fr);
         grid-template-rows: minmax(120px, 1fr);
         margin-top: 38px;
         margin-bottom: 36px;
@@ -18,11 +18,5 @@
             "name edit-button"
             "profession profession"
             "add-button add-button";
-    }
-}
-
-@media screen and (max-width: 320px) {
-    .profile {
-        grid-template-columns: minmax(120px, 1fr);
     }
 }
