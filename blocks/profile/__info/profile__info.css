@@ -22,7 +22,6 @@
 
 @media screen and (max-width: 320px) {
     .profile__info {
-        padding: 0 0 36px 0;
-        justify-self: end;
+        padding-left: 0;
     }
 }

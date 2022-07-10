@@ -24,13 +24,5 @@
 @media screen and (max-width: 320px) {
     .profile {
         grid-template-columns: minmax(120px, 1fr);
-        grid-template-rows: minmax(120px, 1fr);
-        margin-top: 38px;
-        margin-bottom: 36px;
-        grid-template-areas:
-            "avatar avatar"
-            "name edit-button"
-            "profession profession"
-            "add-button add-button";
     }
 }

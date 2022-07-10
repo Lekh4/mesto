@@ -8,12 +8,14 @@
     font-style: normal;
     margin: 0;
     text-rendering: optimizeLegibility;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 740px) {
     .profile__profession {
         width: 282px;
-        height: 14px;
         padding: 0;
         font-size: 14px;
         padding-top: 0;

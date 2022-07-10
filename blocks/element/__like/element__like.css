@@ -1,5 +1,5 @@
 .element__like {
-    width: 22px;
+    width: 27px;
     height: 19px;
     cursor: pointer;
     background-image: url('../../../images/like-button-inactive.jpg');
@@ -8,7 +8,7 @@
     border: 0;
     transition: .6s;
     margin-top: 26px;
-    margin-right: 21px;
+    margin-right: 17px;
 }
 
 .element__like:hover {
