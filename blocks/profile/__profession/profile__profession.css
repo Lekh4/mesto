@@ -1,12 +1,12 @@
 .profile__profession {
     max-width: 310px;
-    padding-top: 0;
-    padding-bottom: 5px;
+    padding-bottom: 2px;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.2;
     color: #fff;
     font-style: normal;
+    margin: 0;
     text-rendering: optimizeLegibility;
 }
 

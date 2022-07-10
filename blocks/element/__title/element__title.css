@@ -9,12 +9,12 @@
     text-rendering: optimizeLegibility;
     padding-right: 24px;
     padding-left: 22px;
-    padding-top: 20px;
+    padding-top: 0;
 }
 
 @media screen and (max-width: 320px) {
     .element__title {
-        padding-top: 19px;
+        padding-top: 0;
         padding-right: 25px;
         font-size: 24px;
     }
