@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     height: 50px;
-    margin-top: 48px;
+    margin-top: 50px;
     margin-bottom: 0;
     padding: 0;
     background-color: #000;
@@ -26,7 +26,7 @@
 
 @media screen and (max-width: 767px) {
     .form__save {
-        margin-top: 45px;
+        margin-top: 46px;
         height: 46px;
         font-size: 14px;
     }

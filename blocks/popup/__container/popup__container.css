@@ -9,8 +9,7 @@
     border-radius: 10px;
     padding: 34px 36px 37px 36px;
     cursor: initial;
-    margin-bottom: 18px;
-    margin-top: 0;
+    margin: auto;
 }
 
 @media screen and (max-width: 512px) {
