@@ -1,6 +1,7 @@
 const popupEditAuthorBtn = document.querySelector('.profile__edit-button');
 const popupCloseBtn = document.querySelector('.popup__close-button');
-const formAuthor = document.querySelector('.popup_edit_profile');
+const formProfileSubmitBtn = document.querySelector('.form_edit_profile');
+const formProfilePopup = document.querySelector('.popup_edit_profile');
 
 const authorNameInForm = document.querySelector('.form__input_info_author-name');
 const authorProfile = document.querySelector('.profile__name');
@@ -18,17 +19,16 @@ function closePopup(element) {
 function openProfilePopup() {
   authorNameInForm.value = authorProfile.textContent;
   authorProfInform.value = authorProfProfile.textContent;
-  openPopup(formAuthor);
+  openPopup(formProfilePopup);
 };
 
 function formProfileSubmit(evt) {
   evt.preventDefault();
   authorProfile.textContent = authorNameInForm.value;
   authorProfProfile.textContent = authorProfInform.value;
-  closePopup(formAuthor);
+  closePopup(formProfilePopup);
 };
 
 popupEditAuthorBtn.addEventListener('click', openProfilePopup);
-popupCloseBtn.addEventListener('click', () => closePopup(formAuthor));
-
-formAuthor.addEventListener('submit', formProfileSubmit);
+popupCloseBtn.addEventListener('click', () => closePopup(formProfilePopup));
+formProfileSubmitBtn.addEventListener('submit', formProfileSubmit);

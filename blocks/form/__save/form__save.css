@@ -12,6 +12,9 @@
     font: inherit;
     color: inherit;
     width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.21
 }
 
 .form__save:hover {
@@ -23,5 +26,6 @@
     .form__save {
         margin-top: 45px;
         height: 46px;
+        font-size: 14px;
     }
 }

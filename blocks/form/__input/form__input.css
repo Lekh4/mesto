@@ -6,19 +6,19 @@
     line-height: 1.21;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     height: 31px;
-    margin-top: 54px;
+    margin-top: 40px;
 }
 
 .form__input:last-of-type {
-    margin-top: 30px;
+    margin-top: 23px;
 }
 
 @media screen and (max-width: 767px) {
     .form__input {
-        margin-top: 75px;
+        margin-top: 67px;
         min-width: 238px;
     }
     .form__input:last-of-type {
-        margin-top: 25px;
+        margin-top: 23px;
     }
 }
