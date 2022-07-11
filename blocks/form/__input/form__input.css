@@ -7,6 +7,8 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     height: 31px;
     margin-top: 40px;
+    margin-bottom: 0;
+    padding: 0;
 }
 
 .form__input:last-of-type {
@@ -18,6 +20,7 @@
         margin-top: 67px;
         min-width: 238px;
     }
+
     .form__input:last-of-type {
         margin-top: 23px;
     }
