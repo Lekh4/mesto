@@ -9,7 +9,7 @@ const popups = document.querySelectorAll('.popup');
 const formProfileSubmitBtn = document.querySelector('.form_edit_profile');
 const formProfilePopup = document.querySelector('.popup_profile');
 const formCardSubmitBtn = document.querySelector('.form_add_card');
-const formAddCardPopup = document.querySelector('.popup__card');
+const formAddCardPopup = document.querySelector('.popup_card');
 
 const placeForCards = document.querySelector('.elements');
 const cardContainer = document.querySelector('element');
@@ -131,4 +131,12 @@ formProfileSubmitBtn.addEventListener('submit', formProfileSubmit);
 formCardSubmitBtn.addEventListener('submit', submitAddCard);
 popupCloseBtn.forEach((item) => {
   item.addEventListener('click', () => closePopup(item.closest('.popup')));
+});
+
+popups.forEach((item) => {
+  item.addEventListener('click', function (evt) {
+    if (evt.target.classList.contains('popup_visible')) {
+      closePopup(item);
+    }
+  });
 });
