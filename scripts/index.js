@@ -132,11 +132,3 @@ formCardSubmitBtn.addEventListener('submit', submitAddCard);
 popupCloseBtn.forEach((item) => {
   item.addEventListener('click', () => closePopup(item.closest('.popup')));
 });
-
-popups.forEach((item) => {
-  item.addEventListener('click', function (evt) {
-    if (evt.target.classList.contains('popup_visible')) {
-      closePopup(item);
-    }
-  });
-});
