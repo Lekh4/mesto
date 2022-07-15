@@ -7,7 +7,7 @@ const cardDeleteBtn = document.querySelector('.element__trash');
 const popups = document.querySelectorAll('.popup');
 
 const formProfileSubmitBtn = document.querySelector('.form_edit_profile');
-const formProfilePopup = document.querySelector('.popup__profile');
+const formProfilePopup = document.querySelector('.popup_profile');
 const formCardSubmitBtn = document.querySelector('.form_add_card');
 const formAddCardPopup = document.querySelector('.popup__card');
 
@@ -15,8 +15,8 @@ const placeForCards = document.querySelector('.elements');
 const cardContainer = document.querySelector('element');
 const templateCard = document.querySelector('#card').content;
 
-const popupZoom = document.querySelector('.popup__zoom');
-const popupZoomImage = document.querySelector('.popup__image');
+const popupZoom = document.querySelector('.popup_zoom');
+const popupZoomImage = document.querySelector('.popup_image');
 const popupZoomImageTitle = document.querySelector('.popup__image-title');
 
 const authorNameInForm = document.querySelector('.form__input_info_author-name');
