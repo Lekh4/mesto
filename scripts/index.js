@@ -126,13 +126,9 @@ function submitAddCard(evt) {
 };
 
 popupAddCardOpenBtn.addEventListener('click', () => openPopup(formAddCardPopup));
-
 popupEditAuthorOpenBtn.addEventListener('click', openProfilePopup);
-
 formProfileSubmitBtn.addEventListener('submit', formProfileSubmit);
-
 formCardSubmitBtn.addEventListener('submit', submitAddCard);
-
 popupCloseBtn.forEach((item) => {
   item.addEventListener('click', () => closePopup(item.closest('.popup')));
 });
