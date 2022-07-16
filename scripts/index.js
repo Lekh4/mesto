@@ -90,7 +90,7 @@ function deleteCard(evt) {
 
 function createCard(image, title) {
   const card = templateCard.querySelector('.element').cloneNode(true);
-  const imageItem = card.querySelector('.element__image');
+  const imageItem = card.querySelector('.element_image');
   imageItem.src = image;
   imageItem.alt = title;
 
