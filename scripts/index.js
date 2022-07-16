@@ -16,8 +16,8 @@ const cardContainer = document.querySelector('element');
 const templateCard = document.querySelector('#card').content;
 
 const zoomPopup = document.querySelector('.popup_zoom');
-const zoomImagePopup = document.querySelector('.popup_image');
-const zoomImageTitlePopup = document.querySelector('.popup_image-title');
+const zoomImagePopup = document.querySelector('.popup__image');
+const zoomImageTitlePopup = document.querySelector('.popup__image-title');
 
 const authorNameInForm = document.querySelector('.form__input_info_author-name');
 const authorProfile = document.querySelector('.profile__name');
