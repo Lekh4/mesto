@@ -141,8 +141,11 @@ popups.forEach((item) => {
 });
 
 openBtnPopupAddCard.addEventListener('click', () => openPopup(popupFormAddCard));
+
 openBtnPopupEditAuthor.addEventListener('click', openProfilePopup);
+
 submitBtnFormProfile.addEventListener('submit', submitFormProfile);
+
 submitBtnFormCard.addEventListener('submit', submitAddCard);
 closeBtnsPopup.forEach((item) => {
   item.addEventListener('click', () => closePopup(item.closest('.popup')));
