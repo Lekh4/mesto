@@ -2,8 +2,8 @@
     padding-top: 0;
     padding-bottom: 54px;
     padding-left: 30px;
-    padding-right: 18px;
-    max-width: 310px;
+    padding-right: 0;
+    max-width: 330px;
     text-rendering: optimizeLegibility;
 }
 
@@ -15,7 +15,14 @@
 
 @media screen and (max-width: 740px) {
     .profile__info {
-        padding: 0 0 36px 0;
-        justify-self: end;
+        padding-bottom: 36px;
+        padding-left: 0;
+        justify-self: center;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .profile__info {
+        padding-bottom: 34px;
     }
 }

@@ -1,6 +1,6 @@
 .profile {
     display: grid;
-    grid-template-columns: fit-content(120px) max-content fit-content(14px) minmax(150px, 1fr);
+    grid-template-columns: fit-content(120px) max-content minmax(150px, 1fr);
     grid-template-rows: minmax(128px, 1fr);
     max-width: 100%;
     margin-top: 42px;
@@ -10,7 +10,7 @@
 @media screen and (max-width: 740px) {
     .profile {
         grid-template-columns: minmax(120px, 1fr);
-        grid-template-rows: minmax(120px, 1fr);
+        grid-template-rows: minmax(1fr);
         margin-top: 38px;
         margin-bottom: 36px;
         grid-template-areas:

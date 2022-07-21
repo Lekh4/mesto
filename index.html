@@ -23,10 +23,13 @@
             <div class="profile__avatar">
             </div>
             <div class="profile__info">
-                <h1 class="profile__name">Жак-Ив Кусто</h1>
+                <div class="profile__flex">
+                    <h1 class="profile__name">Жак-Ив Кусто</h1>
+                    <button class="profile__edit-button" aria-label="Редактировать добавление текста"
+                        type="button"></button>
+                </div>
                 <p class="profile__profession">Исследователь океана</p>
             </div>
-            <button class="profile__edit-button" aria-label="Редактировать добавление текста" type="button"></button>
             <button class="profile__add-button" aria-label="Добавить" type="button"></button>
         </section>
 
@@ -52,7 +55,7 @@
     <div class="popup popup_profile">
         <div class="popup__container">
             <button class="popup__close-button" aria-label="Закрыть форму" type="button"></button>
-            <form class="form form_edit_profile" name="form-author">
+            <form class="form form_edit_profile" name="form-author" novalidate>
                 <h2 class="form__title">Редактировать профиль</h2>
                 <input id="author-name-input" class="form__input form__input_info_author-name" placeholder="Имя автора"
                     type="text" name="author-name" required minlength="2" maxlength="40">
@@ -69,7 +72,7 @@
     <div class="popup popup_card">
         <div class="popup__container">
             <button class="popup__close-button" aria-label="Закрыть форму" type="button"></button>
-            <form class="form form_add_card" name="form-card">
+            <form class="form form_add_card" name="form-card" novalidate>
                 <h2 class="form__title">Новое место</h2>
                 <input id="card-name-input" class="form__input form__input_info_card-name" placeholder="Название"
                     type="text" name="card-name" required minlength="2" maxlength="30">

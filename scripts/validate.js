@@ -37,10 +37,12 @@ const checkInputValidity = (formElement, inputElement, elements) => {
 
 const buttonDisabled = (buttonElement, elements) => {
     buttonElement.classList.add(elements.inactiveButtonClass);
+    buttonElement.disabled = true;
 };
 
 const buttonEnabled = (buttonElement, elements) => {
     buttonElement.classList.remove(elements.inactiveButtonClass);
+    buttonElement.disabled = false;
 };
 
 const toggleButtonState = (inputList, buttonElement, elements) => {

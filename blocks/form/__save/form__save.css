@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     height: 50px;
-    margin-top: 50px;
+    margin-top: 17px;
     margin-bottom: 0;
     padding: 0;
     background-color: #000;
@@ -24,9 +24,8 @@
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 512px) {
     .form__save {
-        margin-top: 34px;
         height: 46px;
         font-size: 14px;
     }
