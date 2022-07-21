@@ -1,4 +1,4 @@
-const selectors = {
+const valSettings = {
     formSelector: '.form',
     inputSelector: '.form__input',
     submitButtonSelector: '.form__save',
@@ -70,4 +70,4 @@ const enableValidation = (elements) => {
     });
 };
 
-enableValidation(selectors);
+enableValidation(valSettings);
