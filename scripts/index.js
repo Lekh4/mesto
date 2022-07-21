@@ -56,10 +56,17 @@ const initialCards = [
 
 function openPopup(element) {
   element.classList.add('popup_visible');
+  document.addEventListener('keydown', closePopupEsc);
 };
 
 function closePopup(element) {
   element.classList.remove('popup_visible');
+};
+
+function closePopupEsc(evt) {
+  if (evt.key === 'Escape') {
+    closePopup(document.querySelector('.popup_visible'));
+  };
 };
 
 function openProfilePopup() {
@@ -124,6 +131,14 @@ function submitAddCard(evt) {
   submitBtnFormCard.reset();
   closePopup(popupFormAddCard);
 };
+
+popups.forEach((item) => {
+  item.addEventListener('click', function (evt) {
+    if (evt.target.classList.contains('popup_visible')) {
+      closePopup(item);
+    }
+  })
+});
 
 openBtnPopupAddCard.addEventListener('click', () => openPopup(popupFormAddCard));
 openBtnPopupEditAuthor.addEventListener('click', openProfilePopup);
