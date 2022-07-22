@@ -131,6 +131,13 @@ function submitAddCard(evt) {
   addCard(placeForCards, item);
   btnSubmitFormCard.reset();
   closePopup(popupFormAddCard);
+  buttonDisabled(evt.target.querySelector('.form__save'), valSettings);
+
+  /* Вопрос: при выведении функции enableValidation(valSettings) тоже работает. 
+  Этот вариант выглядит более изящно и универсально, хотя вариант, 
+  который я использую в коде более точечный для поставленной задачи. 
+  Вопрос, можно ли использовать закомментированный вариант в таких случаях? */
+
 };
 
 popups.forEach((item) => {
