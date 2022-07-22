@@ -129,7 +129,9 @@ function submitAddCard(evt) {
   evt.preventDefault();
   const item = createCard(cardRefForm.value, cardNameForm.value);
   addCard(placeForCards, item);
+
   btnSubmitFormCard.reset();
+  
   closePopup(popupFormAddCard);
   buttonDisabled(evt.target.querySelector('.form__save'), valSettings);
 
