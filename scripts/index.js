@@ -40,17 +40,24 @@ initialCards.forEach((item) => {
   addCard(item);
 });
 
+const validationFormCard = new FormValidator(valSettings, btnSubmitFormCard);
+validationFormCard.enableValidation();
+const validationFormProfile = new FormValidator(valSettings, btnSubmitFormProfile);
+validationFormProfile.enableValidation();
+const resetFormCard = new FormValidator(valSettings, btnSubmitFormCard);
+resetFormCard.resetValidation();
+
 function submitAddCard(evt) {
   evt.preventDefault();
-  
+
   const item = {
     name: cardNameForm.value,
     link: cardRefForm.value,
   };
-  validationFormCard.enableValidation();
+  
   addCard(item);
-  evt.target.reset();
   resetFormCard.resetValidation();
+  evt.target.reset();
   closePopup(popupFormAddCard);
 };
 
@@ -78,14 +85,6 @@ popups.forEach((item) => {
     }
   })
 });
-
-const validationFormCard = new FormValidator(valSettings, btnSubmitFormCard);
-validationFormCard.enableValidation();
-
-const validationFormProfile = new FormValidator(valSettings, btnSubmitFormProfile);
-validationFormProfile.enableValidation();
-
-const resetFormCard = new FormValidator(valSettings, btnSubmitFormCard);
 
 btnOpenPopupAddCard.addEventListener('click', () => openPopup(popupFormAddCard));
 
