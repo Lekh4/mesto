@@ -11,7 +11,7 @@ export const popupFormProfile = document.querySelector('.popup_profile');
 export const btnSubmitFormCard = document.querySelector('.form_add_card');
 export const popupFormAddCard = document.querySelector('.popup_card');
 
-export const placeForCards = document.querySelector('.elements');
+export const cardsPlace = document.querySelector('.elements');
 export const cardContainer = document.querySelector('element');
 
 export const zoomImagePopup = document.querySelector('.popup__image');
@@ -53,7 +53,7 @@ export const initialCards = [
     }
 ];
 
-export const valSettings = {
+export const validationSettings = {
     formSelector: '.form',
     inputSelector: '.form__input',
     submitButtonSelector: '.form__save',
@@ -63,18 +63,17 @@ export const valSettings = {
 };
 
 export function openPopup(element) {
-  element.classList.add('popup_visible');
-  document.addEventListener('keydown', closePopupEsc);
+    element.classList.add('popup_visible');
+    document.addEventListener('keydown', closePopupEsc);
 };
 
 export function closePopup(element) {
     element.classList.remove('popup_visible');
     document.removeEventListener('keydown', closePopupEsc);
-  };
-  
+};
+
 export function closePopupEsc(evt) {
     if (evt.key === 'Escape') {
         closePopup(document.querySelector('.popup_visible'));
     };
-  };
-
+};

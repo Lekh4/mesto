@@ -1,11 +1,11 @@
 export default class FormValidator {
-    constructor(valSettings, formElement) {
+    constructor(validationSettings, formElement) {
         this._formElement = formElement;
-        this._valSettings = valSettings;
-        this._inputErrorClass = this._formElement.querySelector(this._valSettings.inputErrorClass);
-        this._errorClass = this._formElement.querySelector(this._valSettings.errorClass);
-        this._inputList = Array.from(formElement.querySelectorAll(this._valSettings.inputSelector));
-        this._buttonElement = this._formElement.querySelector(this._valSettings.submitButtonSelector);
+        this._validationSettings = validationSettings;
+        this._inputErrorClass = this._formElement.querySelector(this._validationSettings.inputErrorClass);
+        this._errorClass = this._formElement.querySelector(this._validationSettings.errorClass);
+        this._inputList = Array.from(formElement.querySelectorAll(this._validationSettings.inputSelector));
+        this._buttonElement = this._formElement.querySelector(this._validationSettings.submitButtonSelector);
     }
 
     _showInputError(inputElement, errorMessage) {
@@ -37,12 +37,12 @@ export default class FormValidator {
     }
 
     _disableButton() {
-        this._buttonElement.classList.add(this._valSettings.inactiveButtonClass);
+        this._buttonElement.classList.add(this._validationSettings.inactiveButtonClass);
         this._buttonElement.disabled = true;
     }
 
     _enableButton() {
-        this._buttonElement.classList.remove(this._valSettings.inactiveButtonClass);
+        this._buttonElement.classList.remove(this._validationSettings.inactiveButtonClass);
         this._buttonElement.disabled = false;
     }
 

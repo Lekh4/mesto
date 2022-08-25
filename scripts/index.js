@@ -7,15 +7,18 @@ import {
   popupFormProfile,
   btnSubmitFormCard,
   popupFormAddCard,
-  placeForCards,
+  cardsPlace,
   authorNameInForm,
   authorProfile,
   authorProfInform,
   authorProfProfile,
   cardNameForm,
+  zoomImagePopup,
+  zoomImageTitlePopup,
+  zoomPopup,
   cardRefForm,
   initialCards,
-  valSettings,
+  validationSettings,
   openPopup,
   closePopup,
   closePopupEsc,
@@ -26,26 +29,32 @@ import { Card } from './Card.js';
 import FormValidator from './FormValidator.js';
 
 function createCard(item) {
-  const card = new Card(item, '.card');
+  const card = new Card(item, '.card', handleOpenPopup);
   const cardElement = card.generateCard();
   return cardElement;
 }
 
 function addCard(item) {
   const newCard = createCard(item);
-  placeForCards.prepend(newCard);
+  cardsPlace.prepend(newCard);
 };
 
 initialCards.forEach((item) => {
   addCard(item);
 });
 
-const validationFormCard = new FormValidator(valSettings, btnSubmitFormCard);
+function handleOpenPopup(name, link) {
+  zoomImagePopup.src = link;
+  zoomImagePopup.alt= name;
+  zoomImageTitlePopup.textContent = name;
+  openPopup(zoomPopup);
+};
+
+const validationFormCard = new FormValidator(validationSettings, btnSubmitFormCard);
 validationFormCard.enableValidation();
-const validationFormProfile = new FormValidator(valSettings, btnSubmitFormProfile);
+validationFormCard.resetValidation();
+const validationFormProfile = new FormValidator(validationSettings, btnSubmitFormProfile);
 validationFormProfile.enableValidation();
-const resetFormCard = new FormValidator(valSettings, btnSubmitFormCard);
-resetFormCard.resetValidation();
 
 function submitAddCard(evt) {
   evt.preventDefault();
@@ -56,8 +65,9 @@ function submitAddCard(evt) {
   };
   
   addCard(item);
-  resetFormCard.resetValidation();
+  
   evt.target.reset();
+  validationFormCard.enableValidation();
   closePopup(popupFormAddCard);
 };
 
@@ -93,6 +103,10 @@ btnOpenPopupEditAuthor.addEventListener('click', openProfilePopup);
 btnSubmitFormProfile.addEventListener('submit', submitFormProfile);
 
 btnSubmitFormCard.addEventListener('submit', submitAddCard);
+
+
+/* не понимаю комментарий, можно более детально? О каком 2 слушателе речь?*/
+
 btnsClosePopup.forEach((item) => {
   item.addEventListener('click', () => closePopup(item.closest('.popup')));
 });
