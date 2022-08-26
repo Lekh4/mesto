@@ -104,9 +104,6 @@ btnSubmitFormProfile.addEventListener('submit', submitFormProfile);
 
 btnSubmitFormCard.addEventListener('submit', submitAddCard);
 
-
-/* не понимаю комментарий, можно более детально? О каком 2 слушателе речь?*/
-
 btnsClosePopup.forEach((item) => {
   item.addEventListener('click', () => closePopup(item.closest('.popup')));
 });
