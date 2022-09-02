@@ -61,19 +61,3 @@ export const validationSettings = {
     inputErrorClass: 'form__input_type_error',
     errorClass: 'form__input-error_active'
 };
-
-export function openPopup(element) {
-    element.classList.add('popup_visible');
-    document.addEventListener('keydown', closePopupEsc);
-};
-
-export function closePopup(element) {
-    element.classList.remove('popup_visible');
-    document.removeEventListener('keydown', closePopupEsc);
-};
-
-export function closePopupEsc(evt) {
-    if (evt.key === 'Escape') {
-        closePopup(document.querySelector('.popup_visible'));
-    };
-};
