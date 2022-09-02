@@ -1,4 +1,4 @@
-import './pages/index.css';
+import './index.css';
 
 import {
   btnOpenPopupAddCard,
@@ -15,26 +15,26 @@ import {
   btnSubmitFormCard,
   initialCards,
   validationSettings,
-} from './scripts/utilities.js';
+} from '../utils/utilities.js';
 
-import Card from './scripts/Card.js';
-import Section from './scripts/Section.js';
-import PopupWithForm from './scripts/PopupWithForm.js';
-import PopupWithImage from './scripts/PopupWithImage.js';
-import UserInfo from './scripts/UserInfo.js';
-import FormValidator from './scripts/FormValidator.js';
+import Card from '../components/Card.js';
+import Section from '../components/Section.js';
+import PopupWithForm from '../components/PopupWithForm.js';
+import PopupWithImage from '../components/PopupWithImage.js';
+import UserInfo from '../components/UserInfo.js';
+import FormValidator from '../components/FormValidator.js';
 
 const validationFormCard = new FormValidator(validationSettings, btnSubmitFormCard);
 const validationFormProfile = new FormValidator(validationSettings, btnSubmitFormProfile);
 
 const cardList = new Section(
   {
-  items: initialCards,
-  renderer: (item) => {
-    const cardItem = handleNewCard(item);
-    cardList.addItem(cardItem);
+    items: initialCards,
+    renderer: (item) => {
+      const cardItem = handleNewCard(item);
+      cardList.addItem(cardItem);
+    },
   },
-},
   cardsPlace
 );
 
@@ -44,7 +44,7 @@ const userInfo = new UserInfo({
 });
 
 function handleCardClick(data) {
-  popupWithImage.open(data);
+  handlePopupWithImage.open(data);
 };
 
 function handleNewCard(card) {
@@ -57,7 +57,7 @@ const popupWithCard = new PopupWithForm(popupFormAddCard, (data) => {
   cardList.addItem(handleNewCard(data));
 });
 
-const popupWithImage = new PopupWithImage(zoomPopup);
+const handlePopupWithImage = new PopupWithImage(zoomPopup);
 
 btnOpenPopupEditAuthor.addEventListener('click', () => {
   popupWithEditAuthor.open();
@@ -75,7 +75,7 @@ btnOpenPopupAddCard.addEventListener('click', () => {
 cardList.renderItems();
 popupWithEditAuthor.setEventListeners();
 popupWithCard.setEventListeners();
-popupWithImage.setEventListeners();
+handlePopupWithImage.setEventListeners();
 validationFormCard.resetValidation();
 validationFormProfile.enableValidation();
 validationFormCard.enableValidation();
