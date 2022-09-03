@@ -32,7 +32,7 @@ export default class Card {
 
     _setEventListeners() {
 
-        this._image.addEventListener('click', () => this._handlePopupWithImage(this._image));
+        this._image.addEventListener('click', () => this._handlePopupWithImage(this._title, this_imageLink));
 
         this._like.addEventListener('click', () => {
             this._handleLike();

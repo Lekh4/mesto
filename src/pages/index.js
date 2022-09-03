@@ -39,8 +39,8 @@ const cardList = new Section(
 );
 
 const userInfo = new UserInfo({
-  name: authorProfile,
-  about: authorProfProfile
+  authorProfile: authorProfile,
+  authorProfProfile: authorProfProfile,
 });
 
 function handleCardClick(data) {
@@ -52,7 +52,9 @@ function handleNewCard(card) {
   return newCard;
 }
 
-const popupWithEditAuthor = new PopupWithForm(popupFormProfile, (data) => userInfo.setUserInfo(data));
+const popupWithEditAuthor = new PopupWithForm(popupFormProfile, (data) => userInfo.setUserInfo({
+  author: data.author, about: data.about
+}));
 const popupWithCard = new PopupWithForm(popupFormAddCard, (data) => {
   cardList.addItem(handleNewCard(data));
 });
