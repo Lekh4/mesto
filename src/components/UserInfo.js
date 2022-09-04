@@ -1,7 +1,7 @@
 export default class UserInfo {
-  constructor({ authorProfile, authorProfProfile }) {
-    this._authorProfile = authorProfile;
-    this._authorProfProfile = authorProfProfile;
+  constructor({ authorProfileSelector, authorProfProfileSelector }) {
+    this._authorProfile = document.querySelector(authorProfileSelector);
+    this._authorProfProfile = document.querySelector(authorProfProfileSelector);
   }
 
   getUserInfo() {
