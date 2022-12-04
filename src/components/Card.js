@@ -32,7 +32,9 @@ export default class Card {
 
     _setEventListeners() {
 
-        this._image.addEventListener('click', () => this._handlePopupWithImage(this._title, this_imageLink));
+        this._image.addEventListener('click', () => {
+            this._handlePopupWithImage({src: this._imageLink, alt: this._title});
+        });
 
         this._like.addEventListener('click', () => {
             this._handleLike();
@@ -50,6 +52,5 @@ export default class Card {
 
     delete() {
         this._element.remove();
-        this._element = null;
     }
 };

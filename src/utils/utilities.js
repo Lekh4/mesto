@@ -20,7 +20,7 @@ export const zoomPopup = document.querySelector('.popup_zoom');
 
 export const authorNameInForm = document.querySelector('.form__input_info_author-name');
 export const authorProfile = document.querySelector('.profile__name');
-export const authorProfInform = document.querySelector('.form__input_info_author-name-profession');
+export const authorProfInForm = document.querySelector('.form__input_info_author-name-profession');
 export const authorProfProfile = document.querySelector('.profile__profession');
 
 export const cardNameForm = document.querySelector('.form__input_info_card-name');

@@ -9,7 +9,6 @@ constructor(popupSelector) {
 
   open(data) {
     super.open();
-   
     this._image.src = data.src;
     this._image.alt = data.alt;
     this._imageTitle.textContent = data.alt;

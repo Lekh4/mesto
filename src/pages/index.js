@@ -8,7 +8,7 @@ import {
   cardsPlace,
   authorNameInForm,
   authorProfile,
-  authorProfInform,
+  authorProfInForm,
   authorProfProfile,
   zoomPopup,
   btnSubmitFormProfile,
@@ -38,10 +38,7 @@ const cardList = new Section(
   cardsPlace
 );
 
-const userInfo = new UserInfo({
-  authorProfile: authorProfile,
-  authorProfProfile: authorProfProfile,
-});
+const userInfo = new UserInfo(authorProfile,authorProfProfile);
 
 function handleCardClick(data) {
   handlePopupWithImage.open(data);
@@ -52,9 +49,12 @@ function handleNewCard(card) {
   return newCard;
 }
 
-const popupWithEditAuthor = new PopupWithForm(popupFormProfile, (data) => userInfo.setUserInfo({
-  author: data.author, about: data.about
-}));
+const popupWithEditAuthor = new PopupWithForm(popupFormProfile, (data) => userInfo.setUserInfo(
+  {
+    author: data.name, 
+    about: data.about
+  }));
+
 const popupWithCard = new PopupWithForm(popupFormAddCard, (data) => {
   cardList.addItem(handleNewCard(data));
 });
@@ -62,11 +62,13 @@ const popupWithCard = new PopupWithForm(popupFormAddCard, (data) => {
 const handlePopupWithImage = new PopupWithImage(zoomPopup);
 
 btnOpenPopupEditAuthor.addEventListener('click', () => {
-  popupWithEditAuthor.open();
+
+  popupWithEditAuthor.open(); 
   const data = userInfo.getUserInfo();
   authorNameInForm.value = data.name;
-  authorProfInform.value = data.about;
+  authorProfInForm.value = data.about;
   validationFormProfile.resetValidation();
+
 });
 
 btnOpenPopupAddCard.addEventListener('click', () => {
